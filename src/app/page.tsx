@@ -1,101 +1,120 @@
+'use client';
+
 import Image from "next/image";
+import { motion } from "framer-motion";
+import CountdownTimer from "@/components/CountdownTimer";
 
-export default function Home() {
+const Home = () => {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className="relative min-h-screen">
+      {/* Hero Section */}
+      <div className="relative h-[80vh]">
+        <div className="absolute inset-0 z-0 overflow-hidden h-full">
+          <Image
+            src="/image.png"
+            alt="Hero Background"
+            fill
+            priority
+            quality={100}
+            sizes="100vw"
+            className="object-cover"
+          />
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+        <div
+          className="absolute inset-0 z-1"
+          style={{
+            background: 'linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5))',
+          }}
+        />
+        <div className="relative z-10">
+          <div className="container mx-auto px-6 py-8">
+            <header className="flex justify-between items-center mb-12">
+              <div className="text-2xl font-bold text-white">Afri World Market</div>
+              <nav className="hidden md:flex space-x-6">
+                <a href="#" className="text-white hover:text-orange-600 transition-colors">Home</a>
+                <a href="#" className="text-white hover:text-orange-600 transition-colors">Exhibitor</a>
+                <a href="#" className="text-white hover:text-orange-600 transition-colors">Visitor</a>
+                <a href="#" className="text-white hover:text-orange-600 transition-colors">Contact</a>
+              </nav>
+              <button className="bg-orange-600 text-white px-6 py-2 rounded-full hover:bg-orange-700 transition-colors">
+                Register Now
+              </button>
+            </header>
+
+            <div className="py-20">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+                className="text-center"
+              >
+                <h1 className="text-5xl md:text-7xl font-bold mb-6 text-white drop-shadow-lg">
+                  8th International Business Forum
+                </h1>
+                <h2 className="text-2xl md:text-3xl text-gray-200 mb-8 drop-shadow-md">
+                  B2B Meetings Program
+                </h2>
+                <div className="flex justify-center items-center gap-4 mb-12">
+                  <div className="flex items-center gap-2">
+                    <span className="text-orange-500">🌍</span>
+                    <span className="text-white font-medium">54 COUNTRIES</span>
+                  </div>
+                  <div className="w-2 h-2 bg-orange-500 rounded-full"></div>
+                  <div className="flex items-center gap-2">
+                    <span className="text-orange-500">📍</span>
+                    <span className="text-white font-medium">ADDIS ABABA, ETHIOPIA</span>
+                  </div>
+                </div>
+
+                <CountdownTimer targetDate="2025-12-04" />
+              </motion.div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Info Section */}
+      <section className="bg-white w-full py-32">
+        <div className="container mx-auto px-6">
+          <div className="grid md:grid-cols-2 gap-16 items-center">
+            <div className="space-y-8">
+              <h2 className="text-5xl font-bold text-gray-900 leading-tight">Forum Motto: <span className="text-orange-600 block mt-2">Grow with Africa!</span></h2>
+              <p className="text-xl text-gray-700 leading-relaxed">
+                The Afri World Market Forum, an international business event, will take place in
+                Addis Ababa, Ethiopia, from December 4-5, 2025. This forum aims to
+                connect future business leaders from various African countries with direct
+                manufacturing companies in Africa.
+              </p>
+              <p className="text-xl text-gray-700 leading-relaxed">
+                African business representatives will have the opportunity to discover high-quality
+                products at competitive prices, available at the right time. Participants will
+                engage directly with producers, eliminating intermediaries.
+              </p>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-orange-600 text-white px-10 py-5 rounded-full text-xl font-semibold hover:bg-orange-700 transition-colors mt-8 w-full md:w-auto shadow-lg"
+              >
+                Learn More
+              </motion.button>
+            </div>
+            <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent z-10"></div>
+              <Image
+                src="/three-business-women.jpg"
+                alt="Business Meeting"
+                fill
+                priority
+                quality={100}
+                sizes="(max-width: 768px) 100vw, 50vw"
+                className="object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
-}
+};
+
+export default Home;
