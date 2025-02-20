@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const images = [
-  '/business-meeting.jpg',
+  '/image8.webp',
   '/three-business-women.jpg',
   '/image.png',
   '/image2.webp',
