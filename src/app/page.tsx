@@ -127,6 +127,87 @@ export default function Home() {
           </div>
         </motion.div>
       </section>
+
+      <section className="w-full bg-white py-32">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="container mx-auto px-4"
+        >
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-orange-600 to-amber-600 bg-clip-text text-transparent">
+            Success Stories
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="bg-gradient-to-br from-amber-50 to-orange-50 dark:from-gray-800 dark:to-gray-700 rounded-2xl p-6 shadow-xl hover:shadow-2xl transition-shadow duration-300"
+            >
+              <div className="relative h-64 mb-6 rounded-xl overflow-hidden">
+                <Image
+                  src="/image5.jpg"
+                  alt="Success Story 1"
+                  fill
+                  className="object-cover transition-transform duration-500 hover:scale-110"
+                />
+              </div>
+              <h3 className="text-2xl font-bold mb-4 text-gray-800 dark:text-white">Eternity Logistics Success</h3>
+              <p className="text-gray-600 dark:text-gray-300 mb-6">Achieved remarkable growth through strategic partnerships and expanded operations across multiple African countries.</p>
+              <button className="bg-orange-600 hover:bg-orange-700 text-white px-6 py-2 rounded-lg transition-colors duration-300">
+                Read More
+              </button>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              viewport={{ once: true }}
+              className="bg-gradient-to-br from-amber-50 to-orange-50 dark:from-gray-800 dark:to-gray-700 rounded-2xl p-6 shadow-xl hover:shadow-2xl transition-shadow duration-300"
+            >
+              <div className="relative h-64 mb-6 rounded-xl overflow-hidden">
+                <Image
+                  src="/image7.jpg"
+                  alt="Success Story 2"
+                  fill
+                  className="object-cover transition-transform duration-500 hover:scale-110"
+                />
+              </div>
+              <h3 className="text-2xl font-bold mb-4 text-gray-800 dark:text-white">$2M Export Achievement</h3>
+              <p className="text-gray-600 dark:text-gray-300 mb-6">Successfully facilitated exports worth $2 million to African countries through strategic B2B connections.</p>
+              <button className="bg-orange-600 hover:bg-orange-700 text-white px-6 py-2 rounded-lg transition-colors duration-300">
+                Read More
+              </button>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.6 }}
+              viewport={{ once: true }}
+              className="bg-gradient-to-br from-amber-50 to-orange-50 dark:from-gray-800 dark:to-gray-700 rounded-2xl p-6 shadow-xl hover:shadow-2xl transition-shadow duration-300"
+            >
+              <div className="relative h-64 mb-6 rounded-xl overflow-hidden">
+                <Image
+                  src="/image8.webp"
+                  alt="Success Story 3"
+                  fill
+                  className="object-cover transition-transform duration-500 hover:scale-110"
+                />
+              </div>
+              <h3 className="text-2xl font-bold mb-4 text-gray-800 dark:text-white">$160K Trade Success</h3>
+              <p className="text-gray-600 dark:text-gray-300 mb-6">Established successful trade partnerships resulting in transactions worth $160,000 through the forum.</p>
+              <button className="bg-orange-600 hover:bg-orange-700 text-white px-6 py-2 rounded-lg transition-colors duration-300">
+                Read More
+              </button>
+            </motion.div>
+          </div>
+        </motion.div>
+      </section>
     </div>
   );
 }
