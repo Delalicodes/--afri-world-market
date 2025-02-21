@@ -59,7 +59,7 @@ const CountdownTimer: React.FC<CountdownTimerProps> = ({ targetDate }) => {
   ];
 
   return (
-    <div className="flex justify-center gap-4 md:gap-8 bg-amber-500 p-6 rounded-lg shadow-xl max-w-4xl mx-auto">
+    <div className="flex justify-center gap-2 sm:gap-4 md:gap-8 bg-amber-500 p-3 sm:p-4 md:p-6 rounded-lg shadow-xl max-w-4xl mx-auto">
       {timeBlocks.map(({ label, value }) => (
         <motion.div
           key={label}
@@ -68,17 +68,17 @@ const CountdownTimer: React.FC<CountdownTimerProps> = ({ targetDate }) => {
           transition={{ duration: 0.5 }}
           className="flex flex-col items-center"
         >
-          <div className="bg-white rounded-lg shadow-lg p-4 md:p-6 w-20 md:w-28">
+          <div className="bg-white rounded-lg shadow-lg p-2 sm:p-3 md:p-6 w-16 sm:w-20 md:w-28">
             <motion.span
               key={value}
               initial={{ y: 10, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
-              className="text-3xl md:text-5xl font-bold text-black block text-center"
+              className="text-xl sm:text-3xl md:text-5xl font-bold text-black block text-center"
             >
               {value.toString().padStart(2, '0')}
             </motion.span>
           </div>
-          <span className="text-sm md:text-base mt-2 text-white font-semibold">
+          <span className="text-xs sm:text-sm md:text-base mt-1 sm:mt-2 text-white font-semibold">
             {label}
           </span>
         </motion.div>
