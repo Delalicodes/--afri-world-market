@@ -4,6 +4,8 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import CountdownTimer from "@/components/CountdownTimer";
 import ImageCarousel from "@/components/ImageCarousel";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHandshake, faGem } from '@fortawesome/free-solid-svg-icons';
 
 export default function Home() {
   return (
@@ -39,12 +41,24 @@ export default function Home() {
                 </h2>
                 <div className="flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-4 mb-8 sm:mb-10 md:mb-12">
                   <div className="flex items-center gap-2 sm:gap-3 bg-white/10 backdrop-blur-sm px-3 sm:px-4 py-2 sm:py-3 rounded-full w-full sm:w-auto">
-                    <span className="text-orange-500 text-xl sm:text-2xl">🌍</span>
+                    <Image
+                      src="/icons/globe-icon.svg"
+                      alt="Globe Icon"
+                      width={24}
+                      height={24}
+                      className="w-6 h-6 text-orange-500"
+                    />
                     <span className="text-sm sm:text-base md:text-lg font-medium">54 COUNTRIES</span>
                   </div>
                   <div className="hidden sm:block w-2 h-2 bg-orange-500 rounded-full"></div>
                   <div className="flex items-center gap-2 sm:gap-3 bg-white/10 backdrop-blur-sm px-3 sm:px-4 py-2 sm:py-3 rounded-full w-full sm:w-auto">
-                    <span className="text-orange-500 text-xl sm:text-2xl">📍</span>
+                    <Image
+                      src="/icons/globe-icon.svg"
+                      alt="Location Icon"
+                      width={24}
+                      height={24}
+                      className="w-6 h-6 text-orange-500"
+                    />
                     <span className="text-sm sm:text-base md:text-lg font-medium break-words">ADDIS ABABA, ETHIOPIA</span>
                   </div>
                 </div>
@@ -89,14 +103,20 @@ export default function Home() {
               </p>
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 md:gap-6 mt-4 sm:mt-6 md:mt-8">
                 <div className="flex items-center gap-2 sm:gap-3 bg-white dark:bg-gray-800 p-3 sm:p-4 rounded-xl shadow-lg flex-1">
-                  <span className="text-xl sm:text-2xl md:text-3xl">🤝</span>
+                  <FontAwesomeIcon
+                    icon={faHandshake}
+                    className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 text-orange-500"
+                  />
                   <div>
                     <div className="font-bold text-orange-600 text-sm sm:text-base">Direct Access</div>
                     <div className="text-xs sm:text-sm text-gray-600 dark:text-gray-400">to Manufacturers</div>
                   </div>
                 </div>
                 <div className="flex items-center gap-2 sm:gap-3 bg-white dark:bg-gray-800 p-3 sm:p-4 rounded-xl shadow-lg flex-1">
-                  <span className="text-xl sm:text-2xl md:text-3xl">💎</span>
+                  <FontAwesomeIcon
+                    icon={faGem}
+                    className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 text-orange-500"
+                  />
                   <div>
                     <div className="font-bold text-orange-600 text-sm sm:text-base">Quality Products</div>
                     <div className="text-xs sm:text-sm text-gray-600 dark:text-gray-400">Competitive Prices</div>
@@ -202,6 +222,179 @@ export default function Home() {
               <button className="bg-orange-600 hover:bg-orange-700 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg transition-all duration-300 text-sm sm:text-base font-medium w-full text-center">
                 Read More
               </button>
+            </motion.div>
+          </div>
+        </motion.div>
+      </section>
+
+      <section className="w-full relative py-12 sm:py-24 md:py-32 overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/image10.jpg"
+            alt="Forum Statistics Background"
+            fill
+            className="object-cover filter brightness-50"
+            quality={100}
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-black/90 via-amber-950/80 to-black/90 backdrop-blur-sm"></div>
+        </div>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="container relative z-10 mx-auto px-3 sm:px-6"
+        >
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-center mb-12 sm:mb-16 md:mb-24 bg-gradient-to-r from-orange-500 via-amber-500 to-orange-500 bg-clip-text text-transparent leading-tight">
+            Forum Statistics
+          </h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 md:gap-12 max-w-6xl mx-auto">
+            <motion.div
+              initial={{ scale: 0.5, opacity: 0 }}
+              whileInView={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              viewport={{ once: true }}
+              className="group bg-white/5 backdrop-blur-xl rounded-2xl p-6 sm:p-8 shadow-2xl border border-white/10 text-center transform hover:scale-105 transition-all duration-300 hover:bg-white/10"
+            >
+              <div className="relative w-16 sm:w-20 md:w-24 h-16 sm:h-20 md:h-24 mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                <Image
+                  src="/icons/globe-icon.svg"
+                  alt="Globe Icon"
+                  fill
+                  className="[&>path]:fill-current text-gradient-to-r from-amber-400 to-orange-400"
+                />
+              </div>
+              <div className="text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-amber-400 to-orange-400 bg-clip-text text-transparent mb-2 group-hover:from-amber-300 group-hover:to-orange-300 transition-all duration-300">54</div>
+              <div className="text-base sm:text-lg font-medium text-amber-100 group-hover:text-amber-50 transition-colors duration-300">Countries</div>
+            </motion.div>
+
+            <motion.div
+              initial={{ scale: 0.5, opacity: 0 }}
+              whileInView={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="group bg-white/5 backdrop-blur-xl rounded-2xl p-6 sm:p-8 shadow-2xl border border-white/10 text-center transform hover:scale-105 transition-all duration-300 hover:bg-white/10"
+            >
+              <div className="relative w-16 sm:w-20 md:w-24 h-16 sm:h-20 md:h-24 mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                <Image
+                  src="/icons/factory-icon.svg"
+                  alt="Factory Icon"
+                  fill
+                  className="[&>path]:fill-current text-gradient-to-r from-amber-400 to-orange-400"
+                />
+              </div>
+              <div className="text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-amber-400 to-orange-400 bg-clip-text text-transparent mb-2 group-hover:from-amber-300 group-hover:to-orange-300 transition-all duration-300">300</div>
+              <div className="text-base sm:text-lg font-medium text-amber-100 group-hover:text-amber-50 transition-colors duration-300">Turkish Manufacturers</div>
+            </motion.div>
+
+            <motion.div
+              initial={{ scale: 0.5, opacity: 0 }}
+              whileInView={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              viewport={{ once: true }}
+              className="group bg-white/5 backdrop-blur-xl rounded-2xl p-6 sm:p-8 shadow-2xl border border-white/10 text-center transform hover:scale-105 transition-all duration-300 hover:bg-white/10"
+            >
+              <div className="relative w-16 sm:w-20 md:w-24 h-16 sm:h-20 md:h-24 mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                <Image
+                  src="/icons/users-icon.svg"
+                  alt="Users Icon"
+                  fill
+                  className="[&>path]:fill-current text-gradient-to-r from-amber-400 to-orange-400"
+                />
+              </div>
+              <div className="text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-amber-400 to-orange-400 bg-clip-text text-transparent mb-2 group-hover:from-amber-300 group-hover:to-orange-300 transition-all duration-300">1500</div>
+              <div className="text-base sm:text-lg font-medium text-amber-100 group-hover:text-amber-50 transition-colors duration-300">Visitors</div>
+            </motion.div>
+
+            <motion.div
+              initial={{ scale: 0.5, opacity: 0 }}
+              whileInView={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              viewport={{ once: true }}
+              className="group bg-white/5 backdrop-blur-xl rounded-2xl p-6 sm:p-8 shadow-2xl border border-white/10 text-center transform hover:scale-105 transition-all duration-300 hover:bg-white/10"
+            >
+              <div className="relative w-16 sm:w-20 md:w-24 h-16 sm:h-20 md:h-24 mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                <Image
+                  src="/icons/calendar-icon.svg"
+                  alt="Calendar Icon"
+                  fill
+                  className="[&>path]:fill-current text-gradient-to-r from-amber-400 to-orange-400"
+                />
+              </div>
+              <div className="text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-amber-400 to-orange-400 bg-clip-text text-transparent mb-2 group-hover:from-amber-300 group-hover:to-orange-300 transition-all duration-300">2</div>
+              <div className="text-base sm:text-lg font-medium text-amber-100 group-hover:text-amber-50 transition-colors duration-300">Days</div>
+            </motion.div>
+          </div>
+        </motion.div>
+      </section>
+
+      <section className="w-full bg-white dark:bg-gray-900 py-12 sm:py-24 md:py-32">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="container mx-auto px-3 sm:px-6"
+        >
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-center mb-2 bg-gradient-to-r from-orange-600 to-amber-600 bg-clip-text text-transparent leading-tight">
+            Photo Album
+          </h2>
+          <p className="text-center text-gray-600 dark:text-gray-400 mb-12 sm:mb-16 md:mb-24 text-base sm:text-lg max-w-3xl mx-auto">
+            Explore moments from our previous forums where business leaders from around Africa came together to forge lasting partnerships
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 md:gap-10 max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="group relative h-64 sm:h-80 rounded-2xl overflow-hidden shadow-xl"
+            >
+              <Image
+                src="/image3.jpg"
+                alt="WCI FORUM 11"
+                fill
+                className="object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6">
+                <h3 className="text-white text-xl sm:text-2xl font-bold">WCI FORUM 11</h3>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              viewport={{ once: true }}
+              className="group relative h-64 sm:h-80 rounded-2xl overflow-hidden shadow-xl"
+            >
+              <Image
+                src="/image4.webp"
+                alt="WCI FORUM 10"
+                fill
+                className="object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6">
+                <h3 className="text-white text-xl sm:text-2xl font-bold">WCI FORUM 10</h3>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.6 }}
+              viewport={{ once: true }}
+              className="group relative h-64 sm:h-80 rounded-2xl overflow-hidden shadow-xl"
+            >
+              <Image
+                src="/image2.webp"
+                alt="WCI FORUM 9"
+                fill
+                className="object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6">
+                <h3 className="text-white text-xl sm:text-2xl font-bold">WCI FORUM 9</h3>
+              </div>
             </motion.div>
           </div>
         </motion.div>
