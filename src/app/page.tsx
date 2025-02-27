@@ -4,6 +4,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import CountdownTimer from "@/components/CountdownTimer";
 import ImageCarousel from "@/components/ImageCarousel";
+import Navbar from "@/components/Navbar";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHandshake, faGem } from '@fortawesome/free-solid-svg-icons';
 
@@ -17,15 +18,7 @@ export default function Home() {
         </div>
         <div className="relative z-10">
           <div className="container mx-auto px-2 sm:px-4 py-4 sm:py-6">
-            <header className="flex flex-col md:flex-row justify-between items-center mb-4 md:mb-8">
-              <div className="text-xl sm:text-2xl md:text-3xl font-bold mb-4 md:mb-0">Afri World Market</div>
-              <nav className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-6 items-center w-full md:w-auto bg-black/30 md:bg-transparent p-3 md:p-0 rounded-lg">
-                <a href="#" className="hover:text-orange-500 transition-colors w-full md:w-auto text-center py-2 md:py-0 text-base sm:text-lg">Home</a>
-                <a href="#" className="hover:text-orange-500 transition-colors w-full md:w-auto text-center py-2 md:py-0 text-base sm:text-lg">Exhibitor</a>
-                <a href="#" className="hover:text-orange-500 transition-colors w-full md:w-auto text-center py-2 md:py-0 text-base sm:text-lg">Visitor</a>
-                <a href="#" className="hover:text-orange-500 transition-colors w-full md:w-auto text-center py-2 md:py-0 text-base sm:text-lg">Contact</a>
-              </nav>
-            </header>
+            <Navbar />
             <div className="text-center py-8 sm:py-16 md:py-20 px-2 sm:px-4">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -399,6 +392,127 @@ export default function Home() {
           </div>
         </motion.div>
       </section>
+
+      <section className="py-16 bg-white dark:bg-gray-900">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900 dark:text-white">LATEST</h2>
+          <h3 className="text-4xl md:text-5xl font-bold text-center mb-16 text-gray-900 dark:text-white">Announcements</h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden">
+              <div className="relative h-64">
+                <Image src="/image.png" alt="Announcement 1" layout="fill" objectFit="cover" />
+              </div>
+              <div className="p-6">
+                <h4 className="text-xl font-semibold mb-4">Forum Registration Now Open</h4>
+                <button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-full transition-colors">Read More</button>
+              </div>
+            </div>
+            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden">
+              <div className="relative h-64">
+                <Image src="/three-business-women.jpg" alt="Announcement 2" layout="fill" objectFit="cover" />
+              </div>
+              <div className="p-6">
+                <h4 className="text-xl font-semibold mb-4">Early Bird Registration Discount Available</h4>
+                <button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-full transition-colors">Read More</button>
+              </div>
+            </div>
+            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden">
+              <div className="relative h-64">
+                <Image src="/image10.jpg" alt="Announcement 3" layout="fill" objectFit="cover" />
+              </div>
+              <div className="p-6">
+                <h4 className="text-xl font-semibold mb-4">New Exhibitors Confirmed for 2025</h4>
+                <button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-full transition-colors">Read More</button>
+              </div>
+            </div>
+          </div>
+          <div className="text-center mt-12">
+            <button className="bg-gray-900 dark:bg-gray-700 text-white px-8 py-3 rounded-full hover:bg-gray-800 dark:hover:bg-gray-600 transition-colors">All Announcements</button>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 bg-gray-50 dark:bg-gray-800">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto bg-white dark:bg-gray-900 rounded-lg shadow-xl p-8">
+            <h2 className="text-3xl font-bold text-center mb-8 text-gray-900 dark:text-white">REGISTRATION FORM</h2>
+            <p className="text-center text-gray-600 dark:text-gray-400 mb-8">To participate in the World Cooperation Industries Forum, please fill the form.</p>
+            <form className="space-y-6">
+              <select className="w-full p-3 border border-gray-300 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white">
+                <option>Turkish Exhibitor</option>
+              </select>
+              <input type="text" placeholder="Full name" className="w-full p-3 border border-gray-300 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white" />
+              <input type="text" placeholder="Company name" className="w-full p-3 border border-gray-300 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white" />
+              <input type="text" placeholder="Country" className="w-full p-3 border border-gray-300 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white" />
+              <input type="email" placeholder="Email address" className="w-full p-3 border border-gray-300 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white" />
+              <input type="tel" placeholder="Phone" className="w-full p-3 border border-gray-300 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white" />
+              <textarea placeholder="Additional Message" rows={4} className="w-full p-3 border border-gray-300 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"></textarea>
+              <input type="text" placeholder="Industry" className="w-full p-3 border border-gray-300 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white" />
+              <button type="submit" className="w-full bg-orange-500 hover:bg-orange-600 text-white py-3 rounded-lg transition-colors font-semibold">Register Now</button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <footer className="bg-gray-900 text-white py-16">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
+            <div className="space-y-4">
+              <Image src="/logo.png" alt="Afri World Market Logo" width={150} height={50} className="mb-4" priority />
+              <p className="text-gray-400">The aim of this organization is to meet Turkish manufacturers and foreign importers. We&apos;re a non-profit business organization.</p>
+              <div className="flex space-x-4">
+                <a href="#" className="text-gray-400 hover:text-white"><i className="fab fa-facebook"></i></a>
+                <a href="#" className="text-gray-400 hover:text-white"><i className="fab fa-twitter"></i></a>
+                <a href="#" className="text-gray-400 hover:text-white"><i className="fab fa-linkedin"></i></a>
+              </div>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold mb-4">Useful Links</h3>
+              <ul className="space-y-2">
+                <li><a href="#" className="text-gray-400 hover:text-white">Home</a></li>
+                <li><a href="#" className="text-gray-400 hover:text-white">About Wci Forum</a></li>
+                <li><a href="#" className="text-gray-400 hover:text-white">Exhibitor Profile</a></li>
+                <li><a href="#" className="text-gray-400 hover:text-white">Visitor Profile</a></li>
+                <li><a href="#" className="text-gray-400 hover:text-white">Sponsorship Details</a></li>
+                <li><a href="#" className="text-gray-400 hover:text-white">About Organizer</a></li>
+                <li><a href="#" className="text-gray-400 hover:text-white">Contact</a></li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold mb-4">Contact Us</h3>
+              <ul className="space-y-2">
+                <li className="flex items-center space-x-2">
+                  <i className="far fa-clock text-orange-500"></i>
+                  <span className="text-gray-400">Mon - Fri 08:00 - 18:00</span>
+                </li>
+                <li className="flex items-center space-x-2">
+                  <i className="fas fa-phone text-orange-500"></i>
+                  <span className="text-gray-400">+90 542 511 21 48</span>
+                </li>
+                <li className="flex items-center space-x-2">
+                  <i className="fas fa-phone text-orange-500"></i>
+                  <span className="text-gray-400">+90 216 344 42 24</span>
+                </li>
+                <li className="flex items-center space-x-2">
+                  <i className="far fa-envelope text-orange-500"></i>
+                  <span className="text-gray-400">info@wciforum.com</span>
+                </li>
+                <li className="flex items-center space-x-2">
+                  <i className="far fa-envelope text-orange-500"></i>
+                  <span className="text-gray-400">visitor@wciforum.com</span>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold mb-4">Wci Forum</h3>
+              <p className="text-gray-400">İçerenköy Mahallesi, Doğrucan Sk. No:25 Özdemir Çoğulcan İş Merkezi Ataşehir/İstanbul</p>
+            </div>
+          </div>
+          <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+            <p>© İlosophorus Expo - İloğoşlu İthalat İhracat Ltd. Şti WCI FORUM</p>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
