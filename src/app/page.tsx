@@ -24,9 +24,9 @@ export default function Home() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
-                className="text-center max-w-4xl mx-auto"
+                className="text-center max-w-4xl mx-auto space-y-4 sm:space-y-6 md:space-y-8"
               >
-                <h1 className="text-2xl sm:text-4xl md:text-7xl font-bold mb-4 sm:mb-6 md:mb-8 leading-tight">
+                <h1 className="text-2xl sm:text-4xl md:text-7xl font-bold leading-tight">
                   8th International Business Forum
                 </h1>
                 <h2 className="text-xl sm:text-2xl md:text-4xl text-gray-300 mb-6 sm:mb-8 md:mb-10 leading-relaxed">
@@ -64,7 +64,7 @@ export default function Home() {
         </div>
       </div>
 
-      <section className="w-full bg-gradient-to-b from-amber-50/40 via-amber-50/40 to-amber-100/50 dark:from-amber-950/20 dark:via-amber-950/20 dark:to-amber-950/30 py-12 sm:py-24 md:py-32 mt-4 sm:mt-0">
+      <section className="w-full bg-gradient-to-b from-amber-50/40 via-amber-50/40 to-amber-100/50 dark:from-amber-950/20 dark:via-amber-950/20 dark:to-amber-950/30 py-12 sm:py-24 md:py-32 -mt-8 sm:mt-0">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -72,7 +72,7 @@ export default function Home() {
           viewport={{ once: true }}
           className="container mx-auto px-3 sm:px-4"
         >
-          <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-center mb-6 sm:mb-8 md:mb-16 bg-gradient-to-r from-orange-600 to-amber-600 bg-clip-text text-transparent">
+          <h2 className="mt-10 text-2xl sm:text-3xl md:text-5xl font-bold text-center mb-6 sm:mb-8 md:mb-16 bg-gradient-to-r from-orange-600 to-amber-600 bg-clip-text text-transparent">
             Forum Motto: Grow with Africa!
           </h2>
           <div className="grid md:grid-cols-2 gap-6 sm:gap-8 md:gap-16 items-center max-w-7xl mx-auto">
