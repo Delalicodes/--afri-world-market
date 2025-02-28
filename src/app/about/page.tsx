@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import Link from 'next/link';
 
 import Navbar from '@/components/Navbar';
 
@@ -106,7 +105,7 @@ export default function AboutPage() {
       </div>
 
       {/* Footer */}
-      <footer className="bg-blue-900 text-white py-8 md:py-12">
+      {/* <footer className="bg-blue-900 text-white py-8 md:py-12">
         <div className="container mx-auto px-6 md:px-4">
           <div className="flex justify-center mb-8">
             <Image
@@ -147,7 +146,7 @@ export default function AboutPage() {
             <p className="mt-2">Powered by IMTGHANA</p>
           </div>
         </div>
-      </footer>
+      </footer> */}
     </div>
   );
 }

@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 export default function Footer() {
   return (
-    <footer className="bg-blue-900 text-white py-12">
+    <footer className="bg-gray-900 text-white py-12">
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="space-y-4">
@@ -34,9 +34,9 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-4">Contact</h3>
             <ul className="space-y-2 text-sm">
-              <li>Email: info@afriworldmarket.com</li>
-              <li>Phone: +1 (234) 567-8900</li>
-              <li>Address: 123 Business Avenue,<br />New York, NY 10001</li>
+              <li>Email: westafricabusiness23@gmail.com</li>
+              <li>Phone: 00 233 594 1687</li>
+              <li>Address: 123 Market Street,<br />Suite 456, Accra, Ghana</li>
             </ul>
           </div>
           
@@ -52,6 +52,7 @@ export default function Footer() {
         
         <div className="border-t border-blue-800 mt-8 pt-8 text-center text-sm">
           <p>&copy; {new Date().getFullYear()} Afri World Market. All rights reserved.</p>
+          <p className="mt-2 text-gray-400">Powered by IMTGHANA</p>
         </div>
       </div>
     </footer>

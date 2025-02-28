@@ -75,61 +75,65 @@ export default function EventsPage() {
         <div className="absolute inset-0 z-10 bg-black bg-opacity-40 backdrop-blur-sm">
           <Navbar />
           <div className="flex items-center justify-center h-full">
-            <h1 className="text-5xl md:text-6xl font-bold text-white text-center tracking-tight mb-60">
+            <h1 className="text-5xl md:text-6xl font-bold text-blue-800 md:text-white text-center tracking-tight mb-52">
               Our Events
             </h1>
           </div>
         </div>
       </div>
 
-      {/* Upcoming Events Section */}
-      <div className="max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">Upcoming Events</h2>
-          <p className="mt-4 text-xl text-gray-500">Join us at our upcoming events and be part of the African trade revolution</p>
-        </div>
+      <section className="w-full bg-blue-100/70 py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Upcoming Events Section */}
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">Upcoming Events</h2>
+            <p className="mt-4 text-xl text-gray-500">Join us at our upcoming events and be part of the African trade revolution</p>
+          </div>
 
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:gap-12">
-          {upcomingEvents.map((event) => (
-            <div key={event.id} className="bg-white rounded-xl shadow-xl overflow-hidden transform transition duration-500 hover:scale-105">
-              <div className="relative h-64">
-                <Image
-                  src={event.image}
-                  alt={event.title}
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <div className="p-6">
-                <div className="flex justify-between items-start mb-4">
-                  <h3 className="text-2xl font-bold text-gray-900">{event.title}</h3>
-                  <CountdownTimer targetDate={event.date} />
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:gap-12">
+            {upcomingEvents.map((event) => (
+              <div key={event.id} className="bg-white rounded-xl shadow-xl overflow-hidden transform transition duration-500 hover:scale-105">
+                <div className="relative h-64">
+                  <Image
+                    src={event.image}
+                    alt={event.title}
+                    fill
+                    className="object-cover"
+                  />
                 </div>
-                <div className="flex items-center gap-4 text-gray-600 mb-4">
-                  <div className="flex items-center">
-                    <Image
-                      src="/icons/calendar-icon.svg"
-                      alt="Calendar"
-                      width={20}
-                      height={20}
-                    />
-                    <span className="ml-2">{new Date(event.date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })} at {event.time}</span>
+                <div className="p-6">
+                  <div className="flex justify-between items-start mb-4">
+                    <h3 className="text-2xl font-bold text-gray-900">{event.title}</h3>
+                    <CountdownTimer targetDate={event.date} />
+                  </div>
+                  <div className="flex items-center gap-4 text-gray-600 mb-4">
+                    <div className="flex items-center">
+                      <Image
+                        src="/icons/calendar-icon.svg"
+                        alt="Calendar"
+                        width={20}
+                        height={20}
+                      />
+                      <span className="ml-2">{new Date(event.date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })} at {event.time}</span>
+                    </div>
+                  </div>
+                  <p className="text-gray-600 mb-6">{event.description}</p>
+                  <div className="flex items-center justify-between">
+                    <span className="text-gray-500">{event.location}</span>
+                    <button className="px-6 py-2 bg-indigo-600 text-white rounded-full hover:bg-indigo-700 transition duration-300">
+                      Register Now
+                    </button>
                   </div>
                 </div>
-                <p className="text-gray-600 mb-6">{event.description}</p>
-                <div className="flex items-center justify-between">
-                  <span className="text-gray-500">{event.location}</span>
-                  <button className="px-6 py-2 bg-indigo-600 text-white rounded-full hover:bg-indigo-700 transition duration-300">
-                    Register Now
-                  </button>
-                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
+      </section>
 
-        {/* Past Events Section */}
-        <div className="mt-20">
+      {/* Past Events Section */}
+      <section className="w-full bg-blue-200/70 py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">Past Events</h2>
             <p className="mt-4 text-xl text-gray-500">Revisit our previous events and their highlights</p>
@@ -158,7 +162,7 @@ export default function EventsPage() {
             ))}
           </div>
         </div>
-      </div>
+      </section>
     </div>
   );
 }

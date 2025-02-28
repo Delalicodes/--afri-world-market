@@ -1,7 +1,6 @@
 'use client';
 
 import Image from "next/image";
-import Link from 'next/link';
 import { motion } from "framer-motion";
 import CountdownTimer from "@/components/CountdownTimer";
 import ImageCarousel from "@/components/ImageCarousel";
@@ -453,7 +452,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <footer className="bg-gradient-to-r from-amber-950 to-brown-900 text-white py-8 md:py-12">
+      {/* <footer className="bg-gradient-to-r from-amber-950 to-brown-900 text-white py-8 md:py-12">
         <div className="container mx-auto px-6 md:px-4">
           <div className="flex justify-center mb-8">
             <Image
@@ -494,7 +493,7 @@ export default function Home() {
             <p className="mt-2">Powered by imtghana.</p>
           </div>
         </div>
-      </footer>
+      </footer> */}
     </div>
   );
 }
