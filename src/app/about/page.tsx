@@ -144,6 +144,7 @@ export default function AboutPage() {
           </div>
           <div className="border-t border-blue-800 mt-8 pt-6 md:pt-8 text-center text-sm md:text-base text-gray-300">
             <p>&copy; {new Date().getFullYear()} AFRI WORLD MARKET. All rights reserved.</p>
+            <p className="mt-2">Powered by IMTGHANA</p>
           </div>
         </div>
       </footer>

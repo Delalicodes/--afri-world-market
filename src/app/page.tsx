@@ -1,6 +1,7 @@
 'use client';
 
 import Image from "next/image";
+import Link from 'next/link';
 import { motion } from "framer-motion";
 import CountdownTimer from "@/components/CountdownTimer";
 import ImageCarousel from "@/components/ImageCarousel";
@@ -327,8 +328,7 @@ export default function Home() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="container mx-auto px-3 sm:px-6"
-        >
+          className="container mx-auto px-3 sm:px-6">
           <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-center mb-2 bg-gradient-to-r from-orange-600 to-amber-600 bg-clip-text text-transparent leading-tight">
             Photo Album
           </h2>
@@ -453,63 +453,45 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      <footer className="bg-gray-900 text-white py-16">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
-            <div className="space-y-4">
-              <Image src="/logo.png" alt="Afri World Market Logo" width={150} height={50} className="mb-4" priority />
-              <p className="text-gray-400">The aim of this organization is to meet Turkish manufacturers and foreign importers. We&apos;re a non-profit business organization.</p>
-              <div className="flex space-x-4">
-                <a href="#" className="text-gray-400 hover:text-white"><i className="fab fa-facebook"></i></a>
-                <a href="#" className="text-gray-400 hover:text-white"><i className="fab fa-twitter"></i></a>
-                <a href="#" className="text-gray-400 hover:text-white"><i className="fab fa-linkedin"></i></a>
+      <footer className="bg-gradient-to-r from-amber-950 to-brown-900 text-white py-8 md:py-12">
+        <div className="container mx-auto px-6 md:px-4">
+          <div className="flex justify-center mb-8">
+            <Image
+              src="/logo.png"
+              alt="AFRI WORLD MARKET Logo"
+              width={180}
+              height={60}
+              className="h-auto"
+            />
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+            <div className="space-y-3">
+              <h4 className="text-lg md:text-xl font-semibold mb-4">About Us</h4>
+              <p className="text-gray-300 text-sm md:text-base">
+                AFRI WORLD MARKET connects African SMEs with global opportunities, fostering growth and sustainable business relationships.
+              </p>
+            </div>
+            <div className="space-y-3">
+              <h4 className="text-lg md:text-xl font-semibold mb-4">Quick Links</h4>
+              <ul className="space-y-2 text-sm md:text-base">
+                <li><Link href="/" className="text-gray-300 hover:text-white transition-colors">Home</Link></li>
+                <li><Link href="/about" className="text-gray-300 hover:text-white transition-colors">About</Link></li>
+                <li><Link href="/services" className="text-gray-300 hover:text-white transition-colors">Services</Link></li>
+                <li><Link href="/contact" className="text-gray-300 hover:text-white transition-colors">Contact</Link></li>
+              </ul>
+            </div>
+            <div className="space-y-3">
+              <h4 className="text-lg md:text-xl font-semibold mb-4">Contact Info</h4>
+              <div className="space-y-2 text-sm md:text-base text-gray-300">
+                <p>Email: info@afriworldmarket.com</p>
+                <p>Phone: +1 234 567 890</p>
+                <p>Address: 123 Business Avenue, Africa</p>
               </div>
             </div>
-            <div>
-              <h3 className="text-xl font-semibold mb-4">Useful Links</h3>
-              <ul className="space-y-2">
-                <li><a href="#" className="text-gray-400 hover:text-white">Home</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-white">About Wci Forum</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-white">Exhibitor Profile</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-white">Visitor Profile</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-white">Sponsorship Details</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-white">About Organizer</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-white">Contact</a></li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold mb-4">Contact Us</h3>
-              <ul className="space-y-2">
-                <li className="flex items-center space-x-2">
-                  <i className="far fa-clock text-orange-500"></i>
-                  <span className="text-gray-400">Mon - Fri 08:00 - 18:00</span>
-                </li>
-                <li className="flex items-center space-x-2">
-                  <i className="fas fa-phone text-orange-500"></i>
-                  <span className="text-gray-400">+90 542 511 21 48</span>
-                </li>
-                <li className="flex items-center space-x-2">
-                  <i className="fas fa-phone text-orange-500"></i>
-                  <span className="text-gray-400">+90 216 344 42 24</span>
-                </li>
-                <li className="flex items-center space-x-2">
-                  <i className="far fa-envelope text-orange-500"></i>
-                  <span className="text-gray-400">info@wciforum.com</span>
-                </li>
-                <li className="flex items-center space-x-2">
-                  <i className="far fa-envelope text-orange-500"></i>
-                  <span className="text-gray-400">visitor@wciforum.com</span>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold mb-4">Wci Forum</h3>
-              <p className="text-gray-400">İçerenköy Mahallesi, Doğrucan Sk. No:25 Özdemir Çoğulcan İş Merkezi Ataşehir/İstanbul</p>
-            </div>
           </div>
-          <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
-            <p>© İlosophorus Expo - İloğoşlu İthalat İhracat Ltd. Şti WCI FORUM</p>
+          <div className="border-t border-blue-800 mt-8 pt-6 md:pt-8 text-center text-sm md:text-base text-gray-300">
+            <p>&copy; {new Date().getFullYear()} AFRI WORLD MARKET. All rights reserved.</p>
+            <p className="mt-2">Powered by imtghana.</p>
           </div>
         </div>
       </footer>
