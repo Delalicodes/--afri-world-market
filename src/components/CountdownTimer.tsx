@@ -59,26 +59,27 @@ const CountdownTimer: React.FC<CountdownTimerProps> = ({ targetDate }) => {
   ];
 
   return (
-    <div className="flex justify-center gap-2 sm:gap-4 md:gap-8 bg-amber-500 p-3 sm:p-4 md:p-6 rounded-lg shadow-xl max-w-4xl mx-auto">
+    <div className="flex justify-center gap-1 sm:gap-2 bg-gradient-to-r from-yellow-400 to-yellow-500 p-1.5 sm:p-2 rounded-lg shadow-md max-w-2xl mx-auto">
       {timeBlocks.map(({ label, value }) => (
         <motion.div
           key={label}
-          initial={{ scale: 0.9, opacity: 0 }}
+          initial={{ scale: 0.95, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 0.5 }}
+          whileHover={{ scale: 1.02 }}
+          transition={{ duration: 0.3 }}
           className="flex flex-col items-center"
         >
-          <div className="bg-white rounded-lg shadow-lg p-2 sm:p-3 md:p-6 w-16 sm:w-20 md:w-28">
+          <div className="bg-white/95 backdrop-blur-sm rounded-lg shadow p-1 sm:p-1.5 w-10 sm:w-14 border border-white/50 hover:border-white transition-all duration-200">
             <motion.span
               key={value}
-              initial={{ y: 10, opacity: 0 }}
+              initial={{ y: 5, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
-              className="text-xl sm:text-3xl md:text-5xl font-bold text-black block text-center"
+              className="text-base sm:text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-yellow-600 to-yellow-500 block text-center"
             >
               {value.toString().padStart(2, '0')}
             </motion.span>
           </div>
-          <span className="text-xs sm:text-sm md:text-base mt-1 sm:mt-2 text-white font-semibold">
+          <span className="text-[8px] sm:text-[10px] mt-0.5 text-white font-medium tracking-wider uppercase">
             {label}
           </span>
         </motion.div>
