@@ -20,6 +20,7 @@ export default function Navbar() {
         <Link href="/" className="hover:text-orange-500 transition-colors w-full md:w-auto text-center py-2 md:py-0 text-base sm:text-lg">Home</Link>
         <Link href="/about" className="hover:text-orange-500 transition-colors w-full md:w-auto text-center py-2 md:py-0 text-base sm:text-lg">About us</Link>
         <Link href="/leadership" className="hover:text-orange-500 transition-colors w-full md:w-auto text-center py-2 md:py-0 text-base sm:text-lg">Leadership</Link>
+        <Link href="/services" className="hover:text-orange-500 transition-colors w-full md:w-auto text-center py-2 md:py-0 text-base sm:text-lg">Services</Link>
         <Link href="/events" className="hover:text-orange-500 transition-colors w-full md:w-auto text-center py-2 md:py-0 text-base sm:text-lg">Events</Link>
         <Link href="/contact" className="hover:text-orange-500 transition-colors w-full md:w-auto text-center py-2 md:py-0 text-base sm:text-lg">Contact</Link>
       </nav>
